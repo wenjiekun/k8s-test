@@ -34,7 +34,7 @@ func init() {
 
 func pong(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "wenjiekun",
+		"message": conf.AppName,
 	})
 }
 
@@ -43,7 +43,7 @@ func main() {
 	r := gin.Default()
 	r.GET("/ping", pong)
 
-	r.Run(":8088")
+	r.Run(":8090")
 	//r.Any("/", func(c *gin.Context) {
 	//	message := strings.Join([]string{"Hello", conf.AppName, conf.Description}, " ")
 	//	c.JSON(200, gin.H{
