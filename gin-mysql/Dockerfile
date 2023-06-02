@@ -12,7 +12,7 @@ VOLUME ["/apps"]
 COPY main /apps/golang_app
 
 # 拷贝配置文件到容器中
-COPY config.yaml /apps/config.yaml
+COPY /conf/config.yaml /apps/conf/config.yaml
 
 # 设置时区为上海
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
