@@ -22,7 +22,7 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 ENV LANG C.UTF-8
 
 # 暴露端口
-#EXPOSE 8088
+EXPOSE 8089
 
 # 运行golang程序的命令
 ENTRYPOINT ["/apps/golang_app"]
